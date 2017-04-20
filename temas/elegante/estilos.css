@@ -1,0 +1,481 @@
+/******** Etiquetas Básicas ********/
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Arial, Tahoma, Verdana;
+	font-size: 100%;
+	font-size: 14px;
+	color: #333;
+	background-color: #DBDBDB;
+}
+p {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	margin: 0;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.1em;
+	padding: 4px;
+	background-color: #F4FFF4;
+	box-shadow: 0 2px 0.15em #777;
+}
+a {
+	text-decoration: none;
+	color: #4F5A4E;
+}
+a:hover {
+	color: #4F5A4E;
+}
+label {
+	border-radius: 1em 2px 2px 1em;
+	padding: 0.3em;
+	padding-left: 0.8em;
+	color: #EFF7EF;
+	background-color: #57876F;
+	box-shadow: inset 0 1px 1px #AEC1AE, 0 2px 0.15em #222;
+	/*white-space: nowrap;*/
+	display: inline-block;
+}
+input[type="text"], select, textarea {
+	margin: 0.5em;
+}
+
+input, select, button, textarea {
+	border-radius: 2px;
+	padding: 0.3em;
+	border: 1px #999 solid;
+	font-size: 0.9em;
+	color: #444;
+	box-shadow: inset 0 0.3em 0.6em rgb(221, 221, 221);
+	transition: box-shadow 3s;
+	-moz-transition: box-shadow 3s;
+	-webkit-transition: box-shadow 3s;
+	-o-transition: box-shadow 3s;
+	transition: border 3s;
+	-moz-transition: border 3s;
+	-webkit-transition: border 3s;
+	-o-transition: border 3s;
+}
+input[type="submit"]:hover,input:hover, select:hover, button:hover, input:active, select:active, button:active {
+	box-shadow: inset 0 0.3em 0.6em #8CC63F;
+	border: 1px #8CC63F solid;
+}
+input[type="submit"], input[type="button"], button {
+	background: #C3C9C3;
+	box-shadow: inset 0 0.3em 0.6em #AFC6C6;
+}
+input[type="text"], input[type="email"], input[type="password"], select {
+	margin-left: -6px;
+}
+fieldset {
+	border-radius: 2px;
+	border: 1px #999 solid;
+	box-shadow: inset 0 0 0.5em #999;
+	margin-bottom: 0.9em;
+}
+/************ Estructura ************/
+#contenedor {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+#arbol {
+	position: relative;
+	width: 100%;
+}
+#header {
+	position: relative;
+	font-family: Arial, Tahoma;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 0.2em #222;
+	margin: 0 0 -1.5em 0;
+	overflow: hidden;
+	z-index: 5;
+	margin-bottom: 1em;
+}
+#titulo {
+	font-family: Impact, 'Trebuchet MS', Arial, Tahoma;
+	font-size: 1.7em;
+	vertical-align: middle;
+	background-color: #AEC1AE;
+	box-shadow:inset 0 -3px 0.5em #91A591, 0 0 0.4em #111;
+	padding-bottom: 0.6em;
+}
+#tronco {
+	position: relative;
+	overflow: hidden;
+	z-index: 4;
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: #E8F2E8;
+	box-shadow: 0px 2px 0.15em rgb(34, 34, 34);
+	padding: 1em;
+}
+#contenido {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	z-index: 5;
+}
+#footer {
+	position: absolute;
+	bottom: 0 !important;
+	bottom: -1px;
+	width: 100%;
+	min-height: 1em;
+	font-family: 'Trebuchet MS', Arial, Tahoma;
+	font-size: 1em;
+	text-align: center;
+	z-index: 5;
+	background-color: #AEC1AE;
+	box-shadow:inset 0 -3px 0.5em #91A591, 0 0 0.4em #111;
+}
+#footer div {
+	padding: 0.2em;
+}
+#footer a {
+}
+/************** Menú Principal y Navegacion **************/
+#menu ul, #menunavegacion ul {
+	padding:0;
+	margin: 1px;
+	font-weight: bold;
+}
+#menu li, #menunavegacion li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+}
+#menu li a, #menunavegacion li a {
+	color: #fff !important;
+	display: inline-block;
+	padding: 0.5em 1.5em;
+	text-shadow: 1px -1px 1px #000, -1px 1px 1px #222;
+	vertical-align: middle;
+	background-color: #AEC1AE;
+	box-shadow: 0px 1px 1px #95A595 inset, 0px 2px 0.15em rgb(34, 34, 34);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+#menu li a:hover, #menunavegacion li a:hover {
+	text-shadow: 2px -2px 4px #000, -2px 2px 4px #000;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+li a#atras {
+	text-align: right;
+	transition:transform 1s;
+	-moz-transition:-moz-transform 1s;
+	-webkit-transition:-webkit-transform 1s;
+	-o-transition:-o-transform 1s;
+}
+li a#atras:hover {
+}
+li a#adelante {
+	text-align: left;
+	transition: transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-webkit-transition: -webkit-transform 1s;
+	-o-transition: -o-transform 1s;
+}
+li a#adelante:hover {
+}
+li a#adelante,li a#atras {
+	color: #CFFFBA;
+}
+/************** Menú Interno **************/
+.menu_interno ul {
+	padding:0;
+}
+.menu_interno li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+.menu_interno li a {
+	position: relative;
+	display: inline-block;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	text-shadow: 1px -1px 2px #fff, -1px 1px 2px #fff;
+	vertical-align: middle;
+	border-radius: 3px;
+	transition: all 0.4s;
+}
+.menu_interno li a:hover {
+	background-color: rgba(255, 239, 211, 0.2);
+	box-shadow: 0 0 0.5em #444;
+	transition: all 0.4s;
+}
+.menu_central {
+	padding:0;
+}
+.menu_central li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	text-align: left !important;
+}
+.menu_central li a {
+	position: relative;
+	text-decoration: bold;
+	display: inline-block;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-shadow: 1px -1px 2px #fff, -1px 1px 2px #fff;
+	vertical-align: middle;
+	transition: all 0.4s;
+}
+.menu_central li a:hover {
+	transition: all 0.4s;
+}
+.nivel1,.nivel2,.nivel3{
+	margin-right: -5px;
+	border-radius: 1px !important;
+}
+.nivel1 {
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	font-size: 1.1em;
+}
+.nivel2 {
+	padding-top: 0.35em;
+	padding-bottom: 0.35em;
+	font-size: 1em;
+}
+.nivel3 {
+	padding-top: 0.05em;
+	padding-bottom: 0.05em;
+	font-size: 0.9em;
+}
+.nivel1:hover,.nivel2:hover,.nivel3:hover{
+	background-color: #fff !important;
+	box-shadow: none;
+}
+input.eliminar {
+	background-image: url('imagenes/eliminar.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto 70%;
+	-webkit-background-size: auto 70%;
+	padding-left: 1.3em;
+}
+.ver img, .registrar img {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.ver:hover img, .registrar:hover img {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+a.registrar, a.ver {
+	text-align: center;
+}
+/**************** Huella ****************/
+.huella {
+	font-size: 1.5em;
+}
+.criterio {
+	display: inline-block;
+}
+.imgcriterio {
+	display:block;
+	margin: 0 auto;
+}
+.emisionBajo {
+	color: green;
+}
+.emisionMedio {
+	color: yellow;
+}
+.emisionAlto {
+	color: red;
+}
+/************** Variaciones **************/
+.seguido {
+	display: inline-block;
+	vertical-align: top;
+}
+.aparte {
+	display: block;
+	text-align: left;
+	vertical-align: middle;
+}
+.aparte label {
+	display: inline-block;
+	margin: 0.3em;
+}
+.aparte .seguido {
+	vertical-align: middle;
+}
+.listado {
+	position: relative;
+	display: block;
+	clear: both;
+	padding: 0.3em;
+}
+.listado:hover {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 0.2em #333;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.resultadolistado {
+	display: inline-block;
+}
+.botoneslistado {
+	display: inline-block;
+}
+.botoneslistado form {
+	display: inline-block;
+}
+.tabulado {
+	overflow: auto;
+	resize: vertical;
+	height: 18em;
+	box-shadow: inset 0 0 0.5em #333;
+	padding: 0.6em;
+}
+.tabulado table, .tabulado tr, .tabulado td, .tabulado th {
+	border: 3px ridge #743800;
+	border-collapse: collapse;
+	text-align: left;
+}
+.tabulado th {
+	background: rgba(73,106,31,0.8);
+	text-align: center;
+	font-size: 0.9em;
+}
+.tabulado table {
+	font-size: 0.8em;
+	width: 100%;
+}
+.tabulado tr:hover {
+	background-color: #5B3700;
+	border-radius: 5px;
+	box-shadow: 0 0 0.5em #A87932;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.ayuda {
+	border-radius: 5px;
+	box-shadow: inset 0 0 0.5em #333;
+	background: rgba(0, 0, 0,0.2);
+}
+.ayuda h2 {
+	border-radius: 0;
+}
+/*********** Elementos JQuery ***********/
+.ui-tooltip, .arrow:after {
+	background: black !important;
+	border: 2px solid white !important;
+}
+.ui-tooltip {
+	padding: 8px 16px !important;
+	color: white !important;
+	border-radius: 20px !important;
+	font-size: 0.7em !important;
+	text-align: center;
+	box-shadow: 0 0 0.5em black !important;
+	opacity: 0.8;
+}
+.arrow {
+	width: 70px;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	bottom: -16px;
+}
+.arrow.top {
+	top: -16px;
+	bottom: auto;
+}
+.arrow.left {
+	left: 20%;
+}
+.arrow:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: -20px;
+	width: 25px;
+	height: 25px;
+	box-shadow: 6px 5px 9px -9px black;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+.arrow.top:after {
+	/*bottom: -16px;
+	top: auto;*/
+}
+/********** Validaciones ***********/
+span.jquery_form_help_usuario.help-block,span.form-error.help-block {
+	font-family: arial, Tahoma, verdana;
+	font-size: 0.8em;
+}
+span.form-error.help-block {
+    display: block;
+    color: #FF7272;
+    text-shadow: 0 0 1px #6B0000;
+}
+span.jquery_form_help_usuario.help-block {
+}
+input.error {
+	box-shadow: inset 0px 0.3em 0.6em #FF6932;
+}
+.strength-meter {
+	font-size: 1em !important;
+	font-weight: normal !important;
+	border-radius: 2px 1em 1em 2px;
+	margin-left: -15px;
+	box-shadow: inset 0 1px 1px #C0E366, 0 2px 0.15em #222;
+	text-shadow: 0 0 3px #fff;
+}
+input#usuario {
+	text-transform: lowercase;
+}
+input#nombre,input#primer_apellido,input#segundo_apellido {
+	text-transform: capitalize;
+}
+input#titulo_ayuda {
+	text-transform: capitalize;
+}
+/******** Personalizaciones JQuery UI *********/
+#ui-datepicker-div {
+	text-shadow: none;
+}

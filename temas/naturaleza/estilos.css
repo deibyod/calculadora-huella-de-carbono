@@ -1,0 +1,559 @@
+/********* Tipos de letra **********/
+@font-face {
+	font-family: Hilo;
+	src: url('letras/HiLo-Deco.ttf') format('truetype');
+}
+@font-face {
+	font-family: Roundbasic;
+	src: url('letras/RoundStyleBasic.ttf') format('truetype');
+}
+@font-face {
+	font-family: Rounddeco;
+	src: url('letras/RoundStyleDeco.ttf') format('truetype');
+}
+@font-face {
+	font-family: Roundmiddle;
+	src: url('letras/RoundStyleMiddle.ttf') format('truetype');
+}
+/******** Etiquetas Básicas ********/
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Roundbasic','Trebuchet MS', Arial, Tahoma;
+	font-size: 100%;
+	font-size: 14px;
+	color: #D1B49A;
+	text-shadow: 0 0 2px #000;
+}
+p {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+	border-radius: 50%;
+	padding: 4px;
+	background-color: #7D4100;
+	box-shadow: inset 0 1px 1px #BA7D48, 0 2px 0.15em #222;
+}
+a {
+	text-decoration: none;
+	color: #ddd;
+}
+a:hover {
+	color: #fff;
+}
+label {
+	border-radius: 1em 2px 2px 1em;
+	padding: 0.3em;
+	padding-left: 0.8em;
+	color: #E7FCAE;
+	background-color: #5E9E00;
+	box-shadow: inset 0 1px 1px #C0E366, 0 2px 0.15em #222;
+	/*white-space: nowrap;*/
+	display: inline-block;
+}
+input[type="text"], select, textarea {
+	margin: 0.5em;
+}
+
+input, select, button, textarea {
+	border-radius: 2px;
+	padding: 0.3em;
+	border: 1px #444 solid;
+	font-size: 0.9em;
+	color: #444;
+	box-shadow: inset 0 0.3em 0.6em rgb(221, 221, 221);
+	transition: box-shadow 3s;
+	-moz-transition: box-shadow 3s;
+	-webkit-transition: box-shadow 3s;
+	-o-transition: box-shadow 3s;
+	transition: border 3s;
+	-moz-transition: border 3s;
+	-webkit-transition: border 3s;
+	-o-transition: border 3s;
+}
+input[type="submit"]:hover,input:hover, select:hover, button:hover, input:active, select:active, button:active {
+	box-shadow: inset 0 0.3em 0.6em #8CC63F;
+	border: 1px #8CC63F solid;
+}
+input[type="submit"], input[type="button"], button {
+	background: #F7C68A;
+	box-shadow: inset 0 0.3em 0.6em #C48946;
+	margin: 0.2em auto;
+}
+input[type="text"], input[type="email"], input[type="password"], select {
+	margin-left: -6px;
+}
+fieldset {
+	border-radius: 2px;
+	border: 1px #B77410 solid;
+	box-shadow: inset 0 0 0.5em #333;
+	margin-bottom: 0.9em;
+}
+/************ Estructura ************/
+#contenedor {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	background: #2D7028 url('imagenes/paisaje.jpg') no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	text-align: center;
+}
+#arbol {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+#header {
+	position: relative;
+	font-family: 'Rounddeco','Trebuchet MS', Arial, Tahoma;
+	text-align: center;
+	text-shadow: 2px 2px 2px #111,-2px -2px 2px #eee,2px -2px 2px #111,-2px 2px 2px #444;
+	color: #CFFFBA;
+	margin: 0 0 -1.5em 0;
+	overflow: hidden;
+	background: transparent url('imagenes/copa-grande.gif') no-repeat bottom center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	z-index: 5;
+}
+#titulo {
+	font-size: 2em;
+	vertical-align: middle;
+}
+#tronco {
+	position: relative;
+	width: auto;
+	height: 100%;
+	padding-bottom: 2.8em;
+	padding-top: 2em;
+	margin: 0 auto;
+	margin-top: -2em;
+	overflow: hidden;
+	background: transparent url('imagenes/tronco.svg') no-repeat top center;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	z-index: 4;
+}
+#contenido {
+	position: relative;
+	width: 66%;
+	max-width: 800px;
+	padding-bottom: 4em;
+	margin: 0 auto;
+	z-index: 5;
+}
+#footer {
+	position: absolute;
+	bottom: 0 !important;
+	bottom: -1px;
+	width: 100%;
+	min-height: 5em;
+	font-family: 'Roundmiddle','Trebuchet MS', Arial, Tahoma;
+	font-size: 1em;
+	text-align: center;
+	text-shadow: 1px 1px 1px #111,-1px -1px 1px #111;
+	color: #CFFFBA;
+	background: transparent url('imagenes/prado.gif') repeat-x;
+	background-size: contain;
+	-webkit-background-size: contain;
+	background-size: auto 100%;
+	-webkit-background-size: auto 100%;
+	z-index: 5;
+}
+#footer div {
+	padding-top: 3.5em;
+}
+/************** Menú Principal y Navegacion **************/
+#menu ul, #menunavegacion ul {
+	padding:0;
+}
+#menu li, #menunavegacion li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+}
+#menu li a, #menunavegacion li a {
+	display: inline-block;
+	padding: 0.5em 1.5em;
+	text-shadow: 1px -1px 2px #000, -1px 1px 2px #000;
+	vertical-align: middle;
+}
+li #inicio {
+	background: url('imagenes/manzana.svg') no-repeat top center;
+	background-size: contain;
+	-webkit-background-size: contain;
+}
+li #micuenta {
+	background: url('imagenes/nido.svg') no-repeat top center;
+	background-size: contain;
+	-webkit-background-size: contain;
+}
+li #registro {
+	background: url('imagenes/ave.svg') no-repeat top center;
+	background-size: contain;
+	-webkit-background-size: contain;
+}
+li #cerrar_sesion {
+	background: url('imagenes/pajaro.svg') no-repeat top center;
+	background-size: contain;
+	-webkit-background-size: contain;
+}
+li a#inicio,li a#micuenta,li a#registro,li a#cerrar_sesion {
+	height: 4em;
+	color: rgba(221, 221, 221, 0);
+	text-shadow: none !important;
+	font-size: 0.8em;
+	transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+li a#inicio:hover,li a#micuenta:hover,li a#registro:hover,li a#cerrar_sesion:hover {
+	color: rgba(221, 221, 221, 1);
+	text-shadow: 1px -1px 2px #000, -1px 1px 2px #000 !important;
+	transform: scale(1.5,1.5);
+	-moz-transform: scale(1.5,1.5);
+	-webkit-transform: scale(1.5,1.5);
+	-o-transform: scale(1.5,1.5);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+a#atras {
+	background: url('imagenes/hoja-izq.png') no-repeat;
+	text-align: right;
+	transition:transform 1s;
+	-moz-transition:-moz-transform 1s;
+	-webkit-transition:-webkit-transform 1s;
+	-o-transition:-o-transform 1s;
+}
+a#atras:hover {
+	transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+li a#adelante {
+	background: url('imagenes/hoja-der.png') no-repeat;
+	text-align: left;
+	transition: transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-webkit-transition: -webkit-transform 1s;
+	-o-transition: -o-transform 1s;
+}
+li a#adelante:hover {
+	transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+}
+a#adelante,li a#atras {
+	width: 8em;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+}
+/************** Menú Interno **************/
+.menu_interno ul {
+	padding:0;
+}
+.menu_interno li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+.menu_interno li a {
+	position: relative;
+	display: inline-block;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-shadow: 1px -1px 2px #000, -1px 1px 2px #000;
+	vertical-align: middle;
+	border-radius: 3px;
+	transition: all 0.4s;
+}
+.menu_interno li a:hover {
+	background-color: rgba(255, 239, 211, 0.2);
+	box-shadow: 0 0 0.5em #A87932;
+	transition: all 0.4s;
+}
+.menu_central {
+	padding:0;
+}
+.menu_central li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	text-align: left !important;
+}
+.menu_central li a {
+	position: relative;
+	display: inline-block;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-shadow: 1px -1px 2px #000, -1px 1px 2px #000;
+	vertical-align: middle;
+	transition: all 0.4s;
+}
+.menu_central li a:hover {
+	transition: all 0.4s;
+}
+.nivel1,.nivel2,.nivel3{
+	margin-right: -5px;
+	box-shadow: 0 0 0.4em rgba(84, 43, 0, 0.3) inset;
+	border-radius: 1px !important;
+}
+.nivel1 {
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	font-size: 1.1em;
+}
+.nivel2 {
+	padding-top: 0.35em;
+	padding-bottom: 0.35em;
+	font-size: 1em;
+}
+.nivel3 {
+	padding-top: 0.05em;
+	padding-bottom: 0.05em;
+	font-size: 0.9em;
+}
+.nivel1:hover,.nivel2:hover,.nivel3:hover{
+	background-color: rgb(125, 65, 0) !important;
+	box-shadow: none;
+	box-shadow: 0px 1px 1px rgb(186, 125, 72) inset, 0px 2px 0.15em rgb(34, 34, 34) !important;
+}
+input.eliminar {
+	background-image: url('imagenes/eliminar.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto 70%;
+	-webkit-background-size: auto 70%;
+	padding-left: 1.3em;
+}
+.ver img, .registrar img {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.ver:hover img, .registrar:hover img {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+/**************** Huella ****************/
+.huella {
+	font-size: 1.5em;
+}
+.criterio {
+	display: inline-block;
+}
+.imagenCriterio {
+	height: 3em;
+	display:block;
+	margin: 0 auto;
+}
+.emisionBajo {
+	color: green;
+}
+.emisionMedio {
+	color: yellow;
+}
+.emisionAlto {
+	color: red;
+}
+/************** Variaciones **************/
+.seguido {
+	display: inline-block;
+	vertical-align: top;
+}
+.aparte {
+	display: block;
+	text-align: left;
+	vertical-align: middle;
+}
+.aparte label {
+	display: inline-block;
+	margin: 0.3em;
+}
+.aparte .seguido {
+	vertical-align: middle;
+}
+.listado {
+	position: relative;
+	display: block;
+	clear: both;
+	padding: 0.3em;
+}
+.listado:hover {
+	background-color: #5B3700;
+	border-radius: 5px;
+	box-shadow: 0 0 0.5em #A87932;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.resultadolistado {
+	display: inline-block;
+}
+.resultadolistado:before {
+	content: " * ";
+}
+.botoneslistado {
+	display: inline-block;
+}
+.botoneslistado form {
+	display: inline-block;
+}
+.tabulado {
+	overflow: auto;
+	resize: vertical;
+	height: 18em;
+	box-shadow: inset 0 0 0.5em #333;
+	padding: 0.6em;
+}
+.tabulado table, .tabulado tr, .tabulado td, .tabulado th {
+	border: 3px ridge #743800;
+	border-collapse: collapse;
+	text-align: left;
+}
+.tabulado th {
+	background: rgba(73,106,31,0.8);
+	text-align: center;
+	font-size: 0.9em;
+}
+.tabulado table {
+	font-size: 0.8em;
+	width: 100%;
+}
+.tabulado tr:hover {
+	background-color: #5B3700;
+	border-radius: 5px;
+	box-shadow: 0 0 0.5em #A87932;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.ayuda, .pagina {
+	border-radius: 5px;
+	box-shadow: inset 0 0 0.5em #333;
+	background: rgba(0, 0, 0,0.2);
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	text-align: justify;
+}
+.ayuda h2, .pagina h2 {
+	border-radius: 0;
+}
+/*********** Elementos JQuery ***********/
+.ui-tooltip, .arrow:after {
+	background: black !important;
+	border: 2px solid white !important;
+}
+.ui-tooltip {
+	font-family: Arial, Tahoma, serif;
+	padding: 8px 16px !important;
+	color: white !important;
+	border-radius: 20px !important;
+	font-size: 0.7em !important;
+	text-align: center;
+	box-shadow: 0 0 0.5em black !important;
+	-webkit-box-shadow: 0 0 0.5em black !important;
+}
+.arrow {
+	width: 70px;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	bottom: -16px;
+}
+.arrow.top {
+	top: -16px;
+	bottom: auto;
+}
+.arrow.left {
+	left: 20%;
+}
+.arrow:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: -20px;
+	width: 25px;
+	height: 25px;
+	box-shadow: 6px 5px 9px -9px black;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+.arrow.top:after {
+	/*bottom: -16px;
+	top: auto;*/
+}
+/********** Validaciones ***********/
+span.jquery_form_help_usuario.help-block,span.form-error.help-block {
+	font-family: arial, Tahoma, verdana;
+	font-size: 0.8em;
+}
+span.form-error.help-block {
+    display: block;
+    color: #FF7272;
+    text-shadow: 0 0 1px #6B0000;
+}
+span.jquery_form_help_usuario.help-block {
+}
+input.error {
+	box-shadow: inset 0px 0.3em 0.6em #FF6932;
+}
+.strength-meter {
+	font-size: 1em !important;
+	font-weight: normal !important;
+	border-radius: 2px 1em 1em 2px;
+	margin-left: -15px;
+	box-shadow: inset 0 1px 1px #C0E366, 0 2px 0.15em #222;
+	text-shadow: 0 0 3px #fff;
+}
+input#usuario {
+	text-transform: lowercase;
+}
+input#nombre,input#primer_apellido,input#segundo_apellido {
+	text-transform: capitalize;
+}
+input#titulo_ayuda {
+	text-transform: capitalize;
+}
+/******** Personalizaciones JQuery UI *********/
+#ui-datepicker-div {
+	text-shadow: none;
+}
